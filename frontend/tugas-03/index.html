@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS</title>
+
+    <style>
+        h1::after {
+            content: "✯";
+        }
+
+        button:hover {
+            background-color: aqua;
+        }
+        
+        #input-name:focus {
+            outline: 1px solid red;
+        }
+
+        .container-flex {
+            display: flex;
+            /* flex-direction: column; */
+            gap: 12px;
+            justify-content: center;
+            align-items: start;
+            background-color: cadetblue;
+            height: 700px;
+        }
+
+        .item {
+            background-color: aqua;
+            padding: 12px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learn Advanced CSS</h1>
+    <button>Hover me</button>
+    <input type="text" id="input-name">
+
+    <div class="container-flex">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>
