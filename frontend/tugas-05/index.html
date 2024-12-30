@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Modifier</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+                roboto: 'Roboto'
+            }
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <button class="bg-red-400 hover:bg-red-700">Click here</button>
+    <br />
+    <br />
+    <label
+      for="name"
+      class="font-roboto text-clifford after:content-['*'] after:text-red-400"
+      >Name</label
+    >
+    <input
+      id="name"
+      class="p-2 border border-gray-600 rounded focus:outline-sky-400 placeholder:italic"
+      placeholder="name"
+    />
+
+    <div class="flex flex-col md:flex-row">
+      <div class="p-[25px] bg-[#6f32a8]">1</div>
+      <div class="p-4 bg-yellow-300">2</div>
+      <div class="p-4 bg-blue-300">3</div>
+    </div>
+  </body>
+</html>
