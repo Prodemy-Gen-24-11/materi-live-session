@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methods</title>
+  </head>
+  <body>
+    <h1 id="title">Let's Learn Javascript DOM</h1>
+
+    <div class="description">Description 1</div>
+    <div class="description">Description 2</div>
+    <div class="description">Description 3</div>
+
+    <ul>
+      <p>Apple</p>
+      <p>Mango</p>
+    </ul>
+
+    <script>
+      // let title = document.getElementById("title");
+      let title = document.querySelector("#title");
+      // console.log(title);
+
+      // let description = document.getElementsByClassName("description");
+      let description = document.querySelector(".description");
+      console.log(description);
+
+      // let list = document.getElementsByTagName("p");
+      let list = document.querySelector("p")
+      console.log(list);
+    </script>
+  </body>
+</html>

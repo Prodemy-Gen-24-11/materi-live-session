@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 id="title">DOM Manipulation</h1>
+    <p id="description">Description goes here</p>
+    <img
+      src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/124/2024/01/13/kucing-putih-2993478675.jpg"
+      alt="kucing putih"
+      id="image"
+    />
+    <ul id="fruitList"></ul>
+
+    <script>
+      // document.getElementById("title").innerHTML = "Let's Manipulate the DOM";
+
+      document.getElementById("description").innerHTML =
+        "Description goes <i>here</i>";
+
+      let image = document.getElementById("image");
+      console.log("BEFORE:", image.getAttribute("src"));
+
+      image.setAttribute(
+        "src",
+        "https://www.firstforwomen.com/wp-content/uploads/sites/2/2024/12/Orange-cat-behavior.jpg?w=953"
+      );
+
+      console.log("AFTER:", image.getAttribute("src"));
+
+      let fruitList = document.getElementById("fruitList");
+
+      let newListItem = document.createElement("li");
+      newListItem.textContent = "Mango";
+      fruitList.appendChild(newListItem);
+
+      let description = document.getElementById("description")
+      description.style.backgroundColor = "blue";
+      description.style.color = "white";
+    </script>
+  </body>
+</html>
