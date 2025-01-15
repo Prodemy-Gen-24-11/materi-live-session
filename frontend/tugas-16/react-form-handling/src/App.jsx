@@ -5,7 +5,7 @@ import FormRHF from "./components/FormRHF";
 function App() {
   return (
     <>
-      <FormRHF />
+      <FormOneState />
     </>
   )
 }

@@ -7,6 +7,7 @@ function FormOneState() {
     email: "",
     city: "Bandung",
     gender: "female",
+    image: "",
     agree: false,
   });
 
@@ -125,8 +126,18 @@ function FormOneState() {
 
         <div>
           <label for="upload">Upload</label>
-          <br/>
-          <input id="upload" name="image" type="file" onChange={onChangeForm} />
+          <br />
+          <input
+            id="upload"
+            name="image"
+            type="file"
+            onChange={(e) => {
+              setDataForm({
+                ...dataForm,
+                image: e.target.files[0],
+              });
+            }}
+          />
         </div>
 
         <button
